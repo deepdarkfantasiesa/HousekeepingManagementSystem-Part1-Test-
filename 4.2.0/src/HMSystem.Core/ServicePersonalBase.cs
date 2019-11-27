@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Abp.Domain.Entities;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace HMSystem
 {
     [Table("ServicePersonalBaseInfo")]
-    public class ServicePersonalBase
+    public class ServicePersonalBase:IEntity
     {
         [Key]
         public int ServicePersonalID { get; set; }
@@ -34,6 +33,7 @@ namespace HMSystem
 
         [StringLength(256)]
         public string IDCard { get; set; }
+        public int Id { get; set; }
 
         public ServicePersonalBase()
         {
@@ -46,7 +46,12 @@ namespace HMSystem
         }
         public enum ServiceType
         {
+            Nanny=0
+        }
 
+        public bool IsTransient()
+        {
+            throw new NotImplementedException();
         }
     }
 }
