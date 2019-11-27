@@ -12,13 +12,16 @@
         <ul class="list-group" id="TaskList">
             @foreach (var task in Model.Tasks)
             {
-                <li class="list-group-item">
-                    <span class="pull-right label @Model.GetTaskLabel(task)">@L($"TaskState_{task.State}")</span>
-                    <h4 class="list-group-item-heading">@task.Title</h4>
-                    <div class="list-group-item-text">
-                        @task.CreationTime.ToString("yyyy-MM-dd HH:mm:ss")
-                    </div>
-                </li>
+            <li class="list-group-item">
+                <span class="pull-right label @Model.GetTaskLabel(task)">@L($"TaskState_{task.State}")</span>
+                <h4 class="list-group-item-heading">@task.ServicePersonalID</h4>
+                <h4 class="list-group-item-heading">@task.ServicePersonalName</h4>
+                <h4 class="list-group-item-heading">@task.BirthDay.ToString("yyyy-MM-dd HH:mm:ss")</h4>
+
+                <div class="list-group-item-text">
+                    @task.CreationTime.ToString("yyyy-MM-dd HH:mm:ss")
+                </div>
+            </li>
             }
         </ul>
     </div>

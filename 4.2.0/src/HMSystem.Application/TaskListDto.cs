@@ -16,5 +16,25 @@ namespace HMSystem
         public DateTime CreationTime { get; set; }
 
         public TaskState State { get; set; }
+        /*------------------------------------------------------------------*/
+        public int ServicePersonalID { get; set; }
+
+        public string ServicePersonalName { get; set; }
+
+        public Gender ServicePersonalGender { get; set; }
+
+        public DateTime BirthDay { get; set; }
+
+        public ServiceType Type { get; set; }
+
+        public string ServiceRegion { get; set; }
+
+        public string TelephoneNumber { get; set; }
+
+        public string SelfIntroduction { get; set; }
+
+        public int NumberOfRoles { get; set; }
+
+        public string IDCard { get; set; }
     }
 }
