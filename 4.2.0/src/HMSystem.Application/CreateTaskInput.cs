@@ -15,5 +15,9 @@ namespace HMSystem
         public string Description { get; set; }
 
         public Guid? AssignedPersonId { get; set; }
+
+        /*--------------------------------------------------------------------------------------*/
+        [StringLength(ServicePersonalBase.MaxTitleLength)]
+        public string ServicePersonalName { get; set; }
     }
 }

@@ -29,6 +29,11 @@
     </div>
 
     <div class="form-group">
+        <label for="Name">@L("Name")</label>
+        <input type="text" name="ServicePersonalName" class="form-control" placeholder="@L("ServicePersonalName")" maxlength="@HMSystem.ServicePersonalBase.MaxTitleLength">
+    </div>
+
+    <div class="form-group">
         @Html.Label(L("AssignedPerson"))
         @Html.DropDownList(
             "AssignedPersonId",

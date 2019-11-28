@@ -59,7 +59,8 @@ namespace HMSystem.Tests
             await _taskAppService.Create(new CreateTaskInput
             {
                 Title = "Newly created task #1",
-                AssignedPersonId = neo.Id
+                AssignedPersonId = neo.Id,
+                ServicePersonalName="ajiao"
             });
 
             UsingDbContext(context =>
@@ -67,6 +68,7 @@ namespace HMSystem.Tests
                 var task1 = context.Tasks.FirstOrDefault(t => t.Title == "Newly created task #1");
                 task1.ShouldNotBeNull();
                 task1.AssignedPersonId.ShouldBe(neo.Id);
+                task1.ServicePersonalName.ShouldBe("ajiao");
             });
         }
 
