@@ -36,5 +36,9 @@ namespace HMSystem
         public int NumberOfRoles { get; set; }
 
         public string IDCard { get; set; }
+        /*-----------------------------------------------------*/
+        public Guid? AssignedPersonId { get; set; }
+
+        public string AssignedPersonName { get; set; }
     }
 }

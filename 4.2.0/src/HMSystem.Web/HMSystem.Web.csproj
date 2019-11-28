@@ -12,7 +12,14 @@
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="wwwroot\js\views\tasks\create.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\views\tasks\create.min.js" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="app.config" />
+    <None Include="wwwroot\js\views\tasks\create.min.js" />
     <None Update="log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>

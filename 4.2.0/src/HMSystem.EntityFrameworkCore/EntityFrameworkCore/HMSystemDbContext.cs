@@ -7,6 +7,7 @@ namespace HMSystem.EntityFrameworkCore
     {
         //Add DbSet properties for your entities...
         public DbSet<ServicePersonalBase> Tasks { get; set; }
+        public DbSet<Person> People { get; set; }
         /*
         public DbSet<ServicePersonalCertificates> Certificates { get; set; }
         public DbSet<Customer> Customers { get; set; }
